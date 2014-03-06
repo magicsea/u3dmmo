@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{92DCEDF7-DEE9-4CE7-A290-BD360EE3F23C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>gameserver</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)_$(ProjectName)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;GAME_SERVER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\extlib\TinyXml;..\net;..\netext;..\share;..\extlib;..\extlib\libiconv-1.9.2-1-lib\include;..\extlib\libiconv-1.9.2-1-lib;..\extlib\libxml2-2.7.8.win32\include;..\extlib\libxml2-2.7.8.win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>TinyXml_d.lib;libiconv.lib;libxml2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\extlib\libiconv-1.9.2-1-lib\lib;$(SolutionDir)\extlib\libxml2-2.7.8.win32\lib;$(SolutionDir)\extlib\TinyXml\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\netext\gc_allnet.h" />
+    <ClInclude Include="..\netext\md5.h" />
+    <ClInclude Include="..\netext\netcmdbase.h" />
+    <ClInclude Include="..\netext\session_bind_base.h" />
+    <ClInclude Include="..\netext\s_cmdchannel.h" />
+    <ClInclude Include="..\net\g_cmdpacket.h" />
+    <ClInclude Include="..\net\g_netpacket.h" />
+    <ClInclude Include="..\net\g_tcplistener.h" />
+    <ClInclude Include="..\net\g_tcpsession.h" />
+    <ClInclude Include="..\net\netsocket.h" />
+    <ClInclude Include="..\net\platform.h" />
+    <ClInclude Include="..\share\alldef.h" />
+    <ClInclude Include="..\share\cmd_region_client.h" />
+    <ClInclude Include="..\share\g_util.h" />
+    <ClInclude Include="..\share\interface.h" />
+    <ClInclude Include="..\share\public.h" />
+    <ClInclude Include="..\share\Singleton.h" />
+    <ClInclude Include="..\xml\xmlMgr.h" />
+    <ClInclude Include="GameWorld.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="s_cmd.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="User.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\netext\md5.cpp" />
+    <ClCompile Include="..\netext\netcmdbase.cpp" />
+    <ClCompile Include="..\netext\session_bind_base.cpp" />
+    <ClCompile Include="..\netext\s_cmdchannel.cpp" />
+    <ClCompile Include="..\net\g_cmdpacket.cpp" />
+    <ClCompile Include="..\net\g_netpacket.cpp" />
+    <ClCompile Include="..\net\g_tcplistener.cpp" />
+    <ClCompile Include="..\net\g_tcpsession.cpp" />
+    <ClCompile Include="..\net\netsocket.cpp" />
+    <ClCompile Include="..\net\platform.cpp" />
+    <ClCompile Include="..\share\g_util.cpp" />
+    <ClCompile Include="..\share\interface.cpp" />
+    <ClCompile Include="..\share\public.cpp" />
+    <ClCompile Include="..\xml\xmlMgr.cpp" />
+    <ClCompile Include="gameserver.cpp" />
+    <ClCompile Include="GameWorld.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="s_cmd.cpp" />
+    <ClCompile Include="User.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

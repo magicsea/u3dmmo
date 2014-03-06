@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="netlib">
+      <UniqueIdentifier>{5150f7a3-15d2-4afe-b9ed-2f98eff5c5ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="share">
+      <UniqueIdentifier>{43d4b8ca-a2b4-4802-b791-74846a0834d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="netlib\net">
+      <UniqueIdentifier>{40695b63-4a0f-47d2-8789-f04643db100d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="netlib\netext">
+      <UniqueIdentifier>{6ee1f5fb-2634-47d5-8899-87f71bb674be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xml">
+      <UniqueIdentifier>{c4e79713-11d1-4d14-a481-21850a520cf6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\g_cmdpacket.h">
+      <Filter>netlib\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\g_netpacket.h">
+      <Filter>netlib\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\g_tcplistener.h">
+      <Filter>netlib\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\g_tcpsession.h">
+      <Filter>netlib\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\netsocket.h">
+      <Filter>netlib\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net\platform.h">
+      <Filter>netlib\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\netext\gc_allnet.h">
+      <Filter>netlib\netext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\netext\md5.h">
+      <Filter>netlib\netext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\netext\netcmdbase.h">
+      <Filter>netlib\netext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\netext\session_bind_base.h">
+      <Filter>netlib\netext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\netext\s_cmdchannel.h">
+      <Filter>netlib\netext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\share\alldef.h">
+      <Filter>share</Filter>
+    </ClInclude>
+    <ClInclude Include="..\share\cmd_region_client.h">
+      <Filter>share</Filter>
+    </ClInclude>
+    <ClInclude Include="..\share\g_util.h">
+      <Filter>share</Filter>
+    </ClInclude>
+    <ClInclude Include="..\share\interface.h">
+      <Filter>share</Filter>
+    </ClInclude>
+    <ClInclude Include="..\share\public.h">
+      <Filter>share</Filter>
+    </ClInclude>
+    <ClInclude Include="..\share\Singleton.h">
+      <Filter>share</Filter>
+    </ClInclude>
+    <ClInclude Include="GameWorld.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="s_cmd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\xml\xmlMgr.h">
+      <Filter>xml</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gameserver.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\g_cmdpacket.cpp">
+      <Filter>netlib\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\g_netpacket.cpp">
+      <Filter>netlib\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\g_tcplistener.cpp">
+      <Filter>netlib\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\g_tcpsession.cpp">
+      <Filter>netlib\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\netsocket.cpp">
+      <Filter>netlib\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\net\platform.cpp">
+      <Filter>netlib\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\netext\md5.cpp">
+      <Filter>netlib\netext</Filter>
+    </ClCompile>
+    <ClCompile Include="..\netext\netcmdbase.cpp">
+      <Filter>netlib\netext</Filter>
+    </ClCompile>
+    <ClCompile Include="..\netext\session_bind_base.cpp">
+      <Filter>netlib\netext</Filter>
+    </ClCompile>
+    <ClCompile Include="..\netext\s_cmdchannel.cpp">
+      <Filter>netlib\netext</Filter>
+    </ClCompile>
+    <ClCompile Include="..\share\g_util.cpp">
+      <Filter>share</Filter>
+    </ClCompile>
+    <ClCompile Include="..\share\interface.cpp">
+      <Filter>share</Filter>
+    </ClCompile>
+    <ClCompile Include="..\share\public.cpp">
+      <Filter>share</Filter>
+    </ClCompile>
+    <ClCompile Include="User.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameWorld.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="s_cmd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\xml\xmlMgr.cpp">
+      <Filter>xml</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

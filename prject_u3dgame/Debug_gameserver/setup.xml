@@ -1,0 +1,7 @@
+<?xml version="1.0"?>  
+<setup>
+	<net>
+		<ip>127.0.0.1</ip>
+		<port>7200</port>
+	</net>
+</setup>
