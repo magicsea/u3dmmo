@@ -1251,96 +1251,138 @@ namespace AssemblyCSharp
         SMSG_RANK_CHAR_LIST                             = 0x501,    // return rank char list
 		
     
-        CMSG_RANK_FIGHT                   using System;= 0x508,usin// query rank char list
-using SySMSG_RANK_FIGHTusing System;
-ULL_ACTION        	
-nam9space AsreturnyCSharp
-{
+        CMSG_RANK_FIGHT                                 = 0x508,    // query rank char list
+        SMSG_RANK_FIGHT                                 = 0x509,    // return rank char list
+		
+        //600~6ff for gww
+
+        CMSG_TASK_INFO_QUERY                            = 0x600,    // ²éÑ¯Íæ¼Òµ±Ç°Ö÷ÏßÈÎÎñµÄtaskÐÅÏ¢
+        SMSG_TASK_INFO_QUERY_RESPONSE                   = 0x601,    // ·µ»ØÍæ¼Òµ±Ç°Ö÷ÏßÈÎÎñµÄtaskÐÅÏ¢
+
+        CMSG_TASK_FIGHT_SUBMIT                          = 0x602,    // Ìá½»taskÕ½¶·½á¹û
+        SMSG_TASK_FIGHT_SUBMIT_RESPONSE                 = 0x603,    // ·µ»ØÌá½»taskÕ½¶·½á¹ûµÄ·´À¡
+
+        CMSG_TASK_DIALOG_QUERY                          = 0x604,	// ÇëÇóÏÂÒ»¸ötask¶Ô»°
+        SMSG_TASK_DIALOG                                = 0x605,	// ÉèÖÃtask¶Ô»°
+
+        CMSG_TASK_FIGHT_START                           = 0x606,	// ·¢ÆðtaskÕ½¶·
+        SMSG_TASK_FIGHT_START                           = 0x607,	// ·µ»ØÈÎÎñ¹ÖÐÅÏ¢¼°Õ½±¨Êý¾Ý£¬¿ªÊ¼taskÕ½¶·
+
+        // new
+        CMSG_TASK_DETAIL_QUERY                          = 0x608,    // ¸ù¾ÝÖ¸¶¨µÄtaskID£¬²éÑ¯Ïà¹ØtaskµÄÏêÏ¸ÐÅÏ¢
+        SMSG_TASK_DETAIL_QUERY_RESPONSE                 = 0x609,    // ·µ»ØÖ¸¶¨µÄtaskµÄÏêÏ¸ÐÅÏ¢
+
+        CMSG_INSTANCE_FIGHT_START                       = 0x610,	// ·¢Æð¸±±¾Õ½¶·
+        SMSG_INSTANCE_FIGHT_START                       = 0x611,	// ·µ»ØÕ½±¨Êý¾Ý£¬¿ªÊ¼¸±±¾Õ½¶·
+
+        SMSG_CHAR_INFO_UPDATE                           = 0x612,
+
+        ///////////////////////////////////////////////////////////////////////
+        
+        CMSG_EQUIPMENT_LIST                             = 0x700,
+        SMSG_EQUIPMENT_LIST_RESPONSE                    = 0x701,
+        CMSG_ITEM_STRENGTHEN                            = 0x702,    // Item Strengthen
+        SMSG_ITEM_STRENGTHEN_RESPONSE                   = 0x703,    // Item Strengthen Response
+        CMSG_ITEM_STRENGTHENEXE                         = 0x704,    // Item StrengthenEXE
+        SMSG_ITEM_STRENGTHENEXE_RESPONSE                = 0x705,    // Item StrengthenEXE Response
+        CMSG_EQUIPMENT_ON                               = 0x706,
+        SMSG_EQUIPMENT_ON_RESPONSE                      = 0x707,
+        CMSG_EQUIPMENT_OFF                              = 0x708,
+        SMSG_EQUIPMENT_OFF_RESPONSE                     = 0x709,
+        SMSG_GET_ITEM_NOTIFY                            = 0x710,
+        CMSG_SORT_REQUEST                               = 0x711,
+        SMSG_SORT_RESPONSE                              = 0x712,
+        CMSG_ITEM_POLISH                            		  = 0x713,
+        SMSG_ITEM_POLISH_RESPONSE                  = 0x714,
+        CMSG_ITEM_POLISHEXE                              = 0x715,
+		SMSG_ITEM_POLISHEXE_RESPONSE                  = 0x716,
+        CMSG_ITEM_SYNTHETIZEEXE                         = 0x717,
+        SMSG_ITEM_SYNTHETIZEEXE_RESPONSE                = 0x718,
+        CMSG_ITEM_UPGRADEEXE                         = 0x719,
+        SMSG_ITEM_UPGRADEEXE_RESPONSE                = 0x720,	
+    	CMSG_TRANSFER_ITEM                              = 0x721,
+    	SMSG_TRANSFER_ITEM_RESPONSE                     = 0x722,
+    	SMSG_SHOP_ITEM_NOTIFY                           = 0x723,
+    	CMSG_SHOP_BUY                                   = 0x724,
+    	SMSG_SHOP_BUY_RESPONSE                          = 0x725,
+		
+        CMSG_PET_TUJIAN                                 =0x800,  
+        SMSG_PET_TUJIAN                                 =0x801,
+        CMSG_PET_XIUXING_EXPE                          = 0x802,
+        SMSG_PET_XIUXING_EXPE                          = 0x803,
+        CMSG_PET_JIANDING                              = 0x804,
+        SMSG_PET_JIANDING                              = 0x805,
+
+
+        SMSG_TASK_ADDMARK1                               = 0x830,//Ôö¼ÓÎÊºÅ
+        SMSG_TASK_ADDMRAK2                               = 0x831,//Ôö¼Ó¸ÐÌ¾ºÅ
+        SMSG_TASK_REMOVEMARK1                            = 0x832,//ÒÆ³ýÎÊºÅ
+        SMSG_TASK_REMOVEMARK2                            = 0x833,//ÒÆ³ý¸ÐÌ¾ºÅ
+        SMSG_TASK_LIST                                   = 0x834,//ÈÎÎñÁÐ±í
+        SMSG_TASK_DETAIL                                 = 0x835,//ÏÔÊ¾ÈÎÎñÏêÏ¸ÄÚÈÝ
+        SMSG_TASK_CHAT                                   = 0x836, //¶Ô»°
+        CMSG_TASK_SELECT                                 = 0x837, //·¢ËÍÑ¡ÔñµÄcheckbox µÄindex
+        CMSG_TASK_PANEL                                  = 0x838, //ÈÎÎñÃæ°åÐÅÏ¢
+        SMSG_TASK_PANEL                                  = 0x839, //ÈÎÎñÃæ°åÐÅÏ¢
+        CMSG_TASK_OPENNPC                                = 0x840, //NPCµã¿ª
+
+
+        NUM_MSG_TYPES                                   = 0x999,	// max msg number
+
+    };
 	
-				
-	public//600~6ff for gww
+	enum FriendsResult
+	{
+	    FRIEND_DB_ERROR				= 0x00,
+	    FRIEND_LIST_FULL			= 0x01,
+	    FRIEND_ONLINE				= 0x02,
+	    FRIEND_OFFLINE				= 0x03,
+	    FRIEND_NOT_FOUND			= 0x04,
+	    FRIEND_REMOVED				= 0x05,
+	    FRIEND_ADDED_ONLINE			= 0x06,
+	    FRIEND_ADDED_OFFLINE		= 0x07,
+	    FRIEND_ALREADY				= 0x08,
+	    FRIEND_SELF					= 0x09,
+	    FRIEND_ENEMY				= 0x0A,
+	    FRIEND_IGNORE_FULL			= 0x0B,
+	    FRIEND_IGNORE_SELF			= 0x0C,
+	    FRIEND_IGNORE_NOT_FOUND		= 0x0D,
+	    FRIEND_IGNORE_ALREADY		= 0x0E,
+	    FRIEND_IGNORE_ADDED			= 0x0F,
+	    FRIEND_IGNORE_REMOVED		= 0x10
+	};
 	
-	publicCenumTASK_INFO_QUERY_NULL_ACTION                    600space As²éÑ¯Íæ¼Òµ±Ç°Ö÷ÏßÈÎÎñµÄtaskÐÅÏ¢	
-	public enum   = 0x001,	// _RESPONSEin client
-	    CMSG_DBLO1space As·µ»Ø                          =                   = des
-_SUBMI
+	enum NPCFlags
 	{
-	    MSG_NULL_ACTION  G_DBLO2space AsÌá½»    Õ½¶·½á¹û= 0x002,	// not usedG_QUERY_OBJE
-	    SMSG_DBLOOKUP      G_DBLO3            	// not used in µÄ·´À¡ed in client
-	    CMSDIALOG1,	// not used in client
-	    CG_DBLO4,	// ÇëÇóÏÂÒ»¸ö    ¶Ô»°= 0x002,	// not usedION   not used in client
-	    CMS// not use5 in cÉèÖÃ  SMSG_QUE in client
-	    CMSG_QUERYTAR
-	{
-	    MSG_NULL_ACTION   G_DBLO6 in c·¢Æðnot usedclient
-	    SMSG_QUERY_OBJ                = 0x008,	// implement7d
-	  µ»Ø    ¹Ö    ¼°Õ½±¨Êý¾Ý£¬¿ªÊ¼MSG_TELEPOMSG_BOOTME   newG_QUERY_OBJECT_ROTATIETAIL                   = 0x006,	// not useespace As¸ù¾ÝÖ¸¶¨      ID£¬    Ïà¹Ø    µÄÏêÏ¸    = 0x002,	// not used    SMSG_ZONOSITION                      = 0         MSG_0B,	// GM   CMSG_DEBUG               INSTANCE                    = 0x009,	// impG_DBL10d
-	    C¸±±¾TELEPORT_TO_UNIT                   = 0x00D,	// GM client only
-	    1    CMSG_              CHARACTER_	
-	public enumCHAR 0x001UPDATMSG_DBLOOKUP        nt only
-	    2,         = 0x0               = 0x010,	// GM client only
-	    CMSG_CREATEMONSTER   	
-	public               EQUIPMENT_LIS
-	{
-	    MSG_NULL_ACTION     	
-n700,	
-	public enum = 0x011,	// G
-	    SMSG_DBLOOKUP        TROYMON1TER              TEM_STRENGTHEN client only
-	    CMSG_DESTROYMON = 0x004,Item StrengthenR_CHEAT                       
-	    SMSG_DBLOOKUP            70x005,	// 
-	    CMSG_CREA ResponseSG_CREATEITEM                 EXient only
-	    CMSG_LEARNnt onl4
-	    SMSG_CHECK_FOR_BEXETEGAMEOBJECT                  EXE
-	    SMSG_DBLOOKUP     nt onl5MAKEMONSTERATTACKGUID     OTS                      = 0x011,	O                 = 0x013,	// BOT_DETEC6TER                       O          = 0x014,	// GM clieBOT_DETEC7MSG_CREATEITEM    = 0x018,	FF
-	    CMSG_FORCEACTION             8                  = 0x018,	FF/ GM client only
-	    CMSG_FOnt onl9TER             GET      NOTIF not used in client
-	    CMSG_DB71STER             SOR   =QUE GM client only
-	    CMSG_DEST      = CMSG_CREATEI enum, but uM client only
-	    CMSG_FOR            =     _CREATEITEM       POLISHM client only
-	    SMSG_PET		      = 3TER                        0x01C,	// GM client only
-	    = 4                           ,	/// TODO: investigate
-	             5,   CR_A_FRIEND_EXPIRM client only
-	    CMSG_BOT0x01E,	/            TEM        YNTHETIZE,	/// TODO: investigate
-	    CMS1ONONOTHER   R_A_FRIEND           = lient only
-	    CMSG_BOT_DETE1 CMSG_FORCEATEM       UPGRAD  = 0x020,	// not used in client
-	ient only
-	    S
-	    CMSG_GODMlient only
-	    CMSG_BOT_DETE20,CMSG_BO	      RANSFER	// G
-	    CMSG_PETGODMODE             2CMSG_CRE = 0x0           =                    = 0x01A,	// GM c2E        = 0x0SHOP_FORCEACTIONSHOW                       GM cli   SMSG_       CMSGBU not used in client
-	    CMS24,	// GM cli// TODO:
-	    CMSGBUt
-	    SMSG_DBLOOKUP        24,	// GM cli                     PET_TUJIAte
-	    CMSG_FORCEACTION         =0x8OOKUP	
-	public enum               = 0x027,	// GM client only
-	    CMSG_CREATEITEM      XIUXING_EXPGM client only
-	    CMSG_SET_W80E           CHEAT    E_SKILL_CHEAT                            = 0   SMSG_REFE  CMSG_US    DIN                 = 0x007,	// no   = 0// TODO: impCHEAT    	// GM client only
-	    CMSG_FLAG_QUEST_FIN                   =    = ADDMARK1.
-	    CMSG_PETGODMODE            830,//Ôö¼ÓÎÊºÅR_QUEST                 RAK2           = 0x02C,	// GM client only1
-	    C¸ÐÌ¾G_SEND_EVENT          REMOVE                = 0x02C,	// GM clt only2,//ÒÆ³ýMSG_SEND_EVENT                                    = 0x02D,	// Gt only3nt clie   CMSG_DEBUG_AISTATE     // GM client only
-	    CMSG_DEST client only4,//    ÁÐ±íUG_CHANGECELLZONE         DISABLE_PVP_CHEAT                      5,//ÏÔÊ¾    CMSGÄÚÈÝR_QUEST             CHA
-	{
-	    MSG_NULL_ACTION          = 0x02F6, //SG_QUERY_OBJEC        = SELEC
-	{
-	    MSG_NULL_ACTION             837   =·¢ËÍÑ¡ÔñµÄcheckbox µÄindex                  = PANECMSG_ADVANCE_SPAWN_TIME           = 0x02F8   =    Ãæ°å    = 0x002,	// not used?
-	    CMSG_AUTH_SRP6_PROOF                 9          = 0x034,	// not         = OPENNPC   CMSG_AUTH_SRP6_BEGIN              40   =NPCµã¿ªCLEAR_QUEST   NUM_     YPESG_DISABLE_PVP_CHEAT                    999 in cmax msg number        };
 	
-	enum FriendsResul    {
-	    FRIEND_DB_ERROR					
-nNSTER   CMSG_CHAR     FULL        CMSG   CMSG_CHARONLINE             lemented
-	  FF SMSG_AUTH_SR   S   CMSG_CHARNOT_FOUND        // T   CMSG_CHAR       in              CMSG_CHARADDE	    SMSG_A                                         ONON             LREADYHAR_CREAT CMS            SELFHAR_G_CHARient            ENEM          A
-	    SMSG_CHARIGNORE  = 0x038,	//B                      // impl     C                      not used in     D                                    E,	// implemented
-	        AYER_LOGF                       SMSG_CHA	
-n10
-	     = 0x037,NPCFlagsed
-	  	    SMUNIT_NPC_FLAG_NOMSG_AUTH_
-	    SM = 0x03F,	// iGOSSIPAYER_ implemen = 0x03F,	// inusedGIVERMSG_P6_RESPON = 0x03F,	// iTRAIN/ im    x03A,	// 	    SMSG_CHARACTER_L_CLASSGIN_3emented
-	    SMSG_CHARACTER_L_PROFGIN_6t, really = 0x03F,	// iVENDE    = 12       =               = 0x04_AMMOimple5AILED                  AMETIMEFOOSMSG_5DE   mented
-	    SMSG_GAMETIMEPOISON,	// 0     mented
-	    SMSG_GAMETIMEREAGENTmple04mplemented
-	    SMSG_GARMOR_LOGIN_409AILED                   AXI= 0x042,= 819DO: implement
-	    CMSSPIRITHEAL/ impl1638                        CMSG_GUIDMSG_C3276mplemented
-	    SMSG_GINNKEEP_LOGIN_6553AILED                  BANK_LOGIN_F3107DO: implement
-	    CMSARENA0x00T/ imple6214                       TABARDCHANG/ impl52428mplemented
-	    SMSG_GBATTLEFIELDPER_SET    4857AILED                  AUCTIONE/ imple09715/ TODO: implement
-	    TABLEMASSERVERT41943nt, reallySG_TRANSFER_ABOUILD     045,	388                           ELLCLIClemen167772FAILED	 = 0x03F,	// iPLAYER_VEHICLEUTH_SRP0G_LOGSFER_PENDIN   CMS}NSE  
+	    UNIT_NPC_FLAG_NONE				= 0,
+	    UNIT_NPC_FLAG_GOSSIP			= 1,
+	    UNIT_NPC_FLAG_QUESTGIVER		= 2,
+	    UNIT_NPC_FLAG_TRAINER			= 16,
+	    UNIT_NPC_FLAG_TRAINER_CLASS		= 32,
+	    UNIT_NPC_FLAG_TRAINER_PROF		= 64,
+	    UNIT_NPC_FLAG_VENDOR			= 128,
+	    UNIT_NPC_FLAG_VENDOR_AMMO		= 256,
+	    UNIT_NPC_FLAG_VENDOR_FOOD		= 512,
+	    UNIT_NPC_FLAG_VENDOR_POISON		= 1024,
+	    UNIT_NPC_FLAG_VENDOR_REAGENT	= 2048,
+	    UNIT_NPC_FLAG_ARMORER			= 4096,
+	    UNIT_NPC_FLAG_TAXIVENDOR		= 8192,
+	    UNIT_NPC_FLAG_SPIRITHEALER		= 16384,
+	    UNIT_NPC_FLAG_SPIRITGUIDE		= 32768,
+	    UNIT_NPC_FLAG_INNKEEPER			= 65536,
+	    UNIT_NPC_FLAG_BANKER			= 131072,
+	    UNIT_NPC_FLAG_ARENACHARTER		= 262144,
+	    UNIT_NPC_FLAG_TABARDCHANGER		= 524288,
+	    UNIT_NPC_FLAG_BATTLEFIELDPERSON	= 1048576,
+	    UNIT_NPC_FLAG_AUCTIONEER		= 2097152,
+	    UNIT_NPC_FLAG_STABLEMASTER		= 4194304,
+	    UNIT_NPC_FLAG_GUILD_BANK		= 8388608,
+	    UNIT_NPC_FLAG_SPELLCLICK		= 16777216,
+		UNIT_NPC_FLAG_PLAYER_VEHICLE	= 0x02000000
+	};
+	
+	
+		
+}
+	
