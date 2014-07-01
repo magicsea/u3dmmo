@@ -3,7 +3,6 @@ using System;
 namespace AssemblyCSharp
 {
 	
-	
 	public enum Opcodes
 	{
 	    MSG_NULL_ACTION                                 = 0x000,
