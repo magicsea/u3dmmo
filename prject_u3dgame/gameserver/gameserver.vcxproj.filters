@@ -99,9 +99,6 @@
     <ClInclude Include="User.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\xml\xmlMgr.h">
-      <Filter>xml</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -157,9 +154,6 @@
     </ClCompile>
     <ClCompile Include="s_cmd.cpp">
       <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\xml\xmlMgr.cpp">
-      <Filter>xml</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
